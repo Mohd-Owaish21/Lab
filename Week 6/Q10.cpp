@@ -3,14 +3,18 @@
 using namespace std;
 int main()
 {
-	char nm[7]="Owaish";
+	char nm[10];
 	char *ptr=nm;
-	cout<<ptr;
-	ptr=nm+strlen(nm)-1;
-	while(ptr>=nm)
+	cin>>nm;
+	int i=0;
+	while(*(ptr+i)!='\0')
 	{
-		cout<<ptr;
-		nm--;
+		i++;
+	}
+	while(i>=0)
+	{
+		cout<<*(ptr+i);
+		i--;
 	}
 	return 0;
 }
